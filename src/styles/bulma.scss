@@ -1,2 +1,12 @@
 @charset "uft-8";
 @import "~bulma/bulma.sass";
+
+.is-color-dark {
+  background-color:hsl(0, 0%, 21%);
+}
+.is-active-background {
+    background-color: white;
+    &:after:hover {
+        background-color: white;
+    }
+}

@@ -5,7 +5,7 @@ const Footer = ({ data }) => {
     <footer className="footer">
       <div>
         <div className="contet hast-text-left">
-
+          
         </div>
         <div className="contet has-text-right">
           <p>

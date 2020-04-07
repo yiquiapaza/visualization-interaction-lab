@@ -1,8 +1,21 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
 import React from "react"
+import { useStaticQuery, graphql } from "gatsby"
+import { Link } from "gatsby"
+import Img from "gatsby-image"
+import PropTypes from "prop-types"
 
-const Header = props => {
+const Header = () => {
+  const data = useStaticQuery(graphql`
+    {
+      file(relativePath: { eq: "logo1.png" }) {
+        childImageSharp {
+          fixed(width: 120, height: 50) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+    }
+  `)
   return (
     <header className="is-color-dark">
       <nav
@@ -10,11 +23,16 @@ const Header = props => {
         role="navigation"
         aria-label="main navigation"
       >
-        <div className="navbar-brand">
-          <Link className="navbar-item" to="/">
-            Here Imange for
+        <div className="navbar-start">
+          <Link className="is-image navbar-item" to="/">
+            <Img
+              fixed={data.file.childImageSharp.fixed}
+              alt="Placeholder image"
+            />
           </Link>
+
           <a
+            href="/"
             role="button"
             className="navbar-burger burger"
             arial-label="menu"
@@ -32,7 +50,6 @@ const Header = props => {
               to="/publications"
               activeStyle={{ color: "red" }}
               className="navbar-item"
-              activeClassName="navbar-item"
             >
               Publications
             </Link>

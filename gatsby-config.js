@@ -1,10 +1,11 @@
 module.exports = {
   siteMetadata: {
-    title: `Visualization and Interaction Lab`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `VIS Lab`,
+    description: `Visualization Interaction Simulation Lab`,
+    author: `@yiquiapaza`,
   },
   plugins: [
+    `gatsby-transformer-json`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
     {
@@ -20,7 +21,7 @@ module.exports = {
         name: `data`,
         path: `${__dirname}/src/data`,
         ignore: [`**/\.*`],
-      }
+      },
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,

@@ -5,10 +5,13 @@ import CardAnderson from "../components/card_professor/card_anderson"
 import CardCarla from "../components/card_professor/card_carla"
 import CardLuciana from "../components/card_professor/card_luciana"
 
+import SEO from "../components/seo"
+
 const Professors = () => {
   return (
-    <div>
+    <div>      
       <Header />
+      <SEO title="Professors" />
       <div className="section">
         <div className="container">
           <div className="columns">

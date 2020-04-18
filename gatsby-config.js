@@ -23,6 +23,14 @@ module.exports = {
         ignore: [`**/\.*`],
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `markdown-publications`,
+        path: `${__dirname}/src/data/publications`,
+      }
+    },
+    `gatsby-transformer-remark`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {

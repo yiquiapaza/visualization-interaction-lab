@@ -2,7 +2,7 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
-const CardCarla = (props) => {
+const CardCarla = ( ) => {
   const data = useStaticQuery(graphql`
     query {
       file(relativePath: { eq: "professors/carla_freitas.png" }) {
